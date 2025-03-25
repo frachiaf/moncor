@@ -1,11 +1,49 @@
 ---
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+// import global css
+import '../styles/global.css';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Tesla Landing">
+	<main>
+		<header class="py-4 px-10 flex items-center fixed top-0 w-full justify-between z-40 text-white">
+			
+			<nav>
+				<ul class="flex [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2">
+					<li><a href="#">Button</a></li>
+					<li><a href="#">Button</a></li>
+					<li><a href="#">Button</a></li>
+					<li><a href="#">Button</a></li>
+				</ul>
+			</nav>
+			<div class="flex text-medium ">
+				<img src="../../public/MONCOR-cropped.png" alt="" width="350" />
+			</div>
+			<nav class="flex">
+				<ul class="flex text-medium [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2">
+					<li><a href="#">Soporte</a></li>
+					<li><a href="#">Cuenta</a></li>
+					<li><a href="#">Tienda</a></li>
+					<li><a href="#">Menú</a></li>
+					
+				</ul>
+			</nav>
+		</header>
+		<section class="bg-black h-screen w-screen text-center relative overflow-hidden relative">
+			<header class="z-30 relative">
+				<h2 class="text-white pt-70 text-[40px] font-medium">Disfrute de Tesla</h2>
+				<p class="text-white text-base">Programe una prueba de conduccion hoy mismo</p>
+			</header>
+			<footer class="z-30 relative flex flex-grow flex-col justify-end">
+				<a href="">Prueba de conduccion</a>
+			</footer>
+			<div class="absolute top-0 bottom-0 h-full w-full z-10">
+				<video class="object-center object-cover h-full w-full" muted loop src="/video.mp4"></video>
+			</div>
+		</section>
+	</main>
 </Layout>
